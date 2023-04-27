@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:CNN_news_reader_ns="http://www.convertigo.com/convertigo/projects/CNN_news_reader" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/CNN_news_reader">
+    <xsd:element name="RSS_connector__GetFeed" type="CNN_news_reader_ns:RSS_connector__GetFeedRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="RSS_connector__GetFeedResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="CNN_news_reader_ns:RSS_connector__GetFeedResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="RSS_connector__GetFeedResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="CNN_news_reader_ns:RSS_connector__GetFeedResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector__GetFeedRequestData">
+        <xsd:sequence/>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channel_imageType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="url" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channel_item_guidType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="isPermaLink" type="xsd:boolean"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channel_item_media-group_media-contentType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="height" type="xsd:short"/>
+                <xsd:attribute name="medium" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+                <xsd:attribute name="url" type="xsd:anyURI"/>
+                <xsd:attribute name="width" type="xsd:short"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channel_item_media-groupType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="content" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channel_item_media-group_media-contentType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channel_itemType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="guid" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channel_item_guidType"/>
+            <xsd:element minOccurs="0" name="group" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channel_item_media-groupType"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pubDate" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rss_channelType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="title" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="link" type="xsd:anyURI"/>
+            <xsd:element minOccurs="0" name="image" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channel_imageType"/>
+            <xsd:element minOccurs="0" name="generator" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lastBuildDate" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="pubDate" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="copyright" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="language" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ttl" type="xsd:byte"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channel_itemType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector_GetFeed_document_rssType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="channel" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rss_channelType"/>
+        </xsd:sequence>
+        <xsd:attribute name="version" type="xsd:double"/>
+    </xsd:complexType>
+    <xsd:complexType name="RSS_connector__GetFeedResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="rss" type="CNN_news_reader_ns:RSS_connector_GetFeed_document_rssType"/>
+            <xsd:element minOccurs="0" name="error" type="CNN_news_reader_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="CNN_news_reader_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="CNN_news_reader_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>

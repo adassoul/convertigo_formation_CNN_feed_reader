@@ -1,0 +1,70 @@
+↓Call_Transaction [steps.TransactionStep-1682603402992]: 
+  sourceTransaction: CNN_news_reader.RSS_connector.GetFeed
+↓news [steps.JsonArrayStep-1682604236439]: 
+  key: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+      - SmartType: 
+        - ↑mode: PLAIN
+        - →→: news
+  ↓Iterator [steps.IteratorStep-1682604261357]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1682603402992
+          - java.lang.String: 
+            - ↑value: ./document/rss/channel/item
+    ↓object [steps.JsonObjectStep-1682604728733]: 
+      ↓title [steps.JsonFieldStep-1682604748328]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: title
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: SOURCE
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1682604261357
+                - java.lang.String: 
+                  - ↑value: ./title/text()
+      ↓description [steps.JsonFieldStep-1682604764583]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: description
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: SOURCE
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1682604261357
+                - java.lang.String: 
+                  - ↑value: ./description/text()
+      ↓imgUrl [steps.JsonFieldStep-1682604772738]: 
+        key: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: PLAIN
+              - →→: imgUrl
+        value: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.steps.SmartType
+            - SmartType: 
+              - ↑mode: SOURCE
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: 1682604261357
+                - java.lang.String: 
+                  - ↑value: ./group/content[1]/@url

@@ -60,6 +60,68 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓H1 [ngx.components.UIDynamicElement-1682606781797]: 
+    beanData: '{"ionBean":"Heading1"}'
+    tagName: h1
+    ↓some_text [ngx.components.UIText-1682606781796]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:CNN News
+  ↓Button [ngx.components.UIDynamicElement-1682606949926]: 
+    beanData: '{"ionBean":"Button","IonExpand":"plain:full"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1682606949921]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓some_text [ngx.components.UIText-1682606949923]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:read feed data
+    ↓attr [ngx.components.UIControlEvent-1682606949925]: 
+      ↓CallSequence [ngx.components.UIDynamicAction-1682607093372]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:CNN_news_reader.Get_CNN_Feed"}'
+        tagName: CallSequence
+  ↓ListContainer [ngx.components.UIDynamicElement-1682607330316]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓Directive [ngx.components.UIControlDirective-1682607330319]: 
+      directiveIndexName: idx
+      directiveItemName: item
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Sequence","project":"CNN_news_reader","input":"","model":{"data":[{"sequence":"CNN_news_reader.Get_CNN_Feed","marker":""}],"path":"?.news","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓ListItem [ngx.components.UIDynamicElement-1682607330322]: 
+        beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1682607330325]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Image [ngx.components.UIDynamicElement-1682607330328]: 
+            beanData: '{"ionBean":"Image","url":"source:{\"filter\":\"Iteration\",\"project\":\"CNN_news_reader\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1682607330319}],\"path\":\"?.imgUrl\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"}'
+            selfClose: true
+            tagName: img
+          ↓H1 [ngx.components.UIDynamicElement-1682607330331]: 
+            beanData: '{"ionBean":"Heading1"}'
+            tagName: h1
+            ↓Text [ngx.components.UIText-1682607330334]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"CNN_news_reader","input":"","model":{"data":[{"priority":1682607330319}],"path":"?.title","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph [ngx.components.UIDynamicElement-1682607330337]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1682607330340]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"CNN_news_reader","input":"","model":{"data":[{"priority":1682607330319}],"path":"?.description","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓FormatLayout [ngx.components.UIDynamicAttr-1682607330343]: 
+            beanData: '{"ionBean":"FormatLayout","TextAlignment":"plain:ion-text-wrap"}'
+            selfClose: false
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

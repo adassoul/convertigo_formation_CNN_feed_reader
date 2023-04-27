@@ -1,0 +1,5 @@
+server: rss.cnn.com
+↓Default_transaction [transactions.HttpTransaction]: 
+  ↑default: true
+↓GetFeed [transactions.XmlHttpTransaction-1682600837636]: 
+  subDir: rss/edition.rss
