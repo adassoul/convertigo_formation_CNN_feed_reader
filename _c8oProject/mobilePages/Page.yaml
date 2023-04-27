@@ -17,45 +17,8 @@ scriptContent:
         
 segment: path-to-xfirst
 title: First page
-↓Header [ngx.components.UIDynamicElement-1491634212350]: 
-  beanData: '{"ionBean":"Header"}'
-  comment: Page header
-  tagName: ion-header
-  ↓ToolBar [ngx.components.UIDynamicElement-1491634231108]: 
-    beanData: '{"ionBean":"ToolBar"}'
-    tagName: ion-toolbar
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588171103814]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
-      tagName: ion-buttons
-      ↓BackButton [ngx.components.UIDynamicElement-1643993281257]: 
-        beanData: '{"ionBean":"BackButton"}'
-        tagName: ion-back-button
-      ↓MenuButton [ngx.components.UIDynamicElement-1588172846908]: 
-        beanData: '{"ionBean":"MenuButton"}'
-        tagName: ion-menu-button
-    ↓BarTitle [ngx.components.UIDynamicElement-1491634265317]: 
-      beanData: '{"ionBean":"BarTitle"}'
-      tagName: ion-title
-      ↓Text [ngx.components.UIText-1491634275121]: 
-        textValue: 
-          - xmlizable: 
-            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Page
-    ↓ButtonSet2 [ngx.components.UIDynamicElement-1588170811054]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
-      tagName: ion-buttons
-      ↓Button [ngx.components.UIDynamicElement-1588170817806]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: ion-button
-        ↓Icon [ngx.components.UIDynamicElement-1588170831166]: 
-          beanData: |
-            '{
-             "ionBean": "Icon",
-             "IconName": "plain:ellipsis-vertical",
-             "IconMdName": "plain",
-             "IconIosName": "plain"
-            }'
-          tagName: ion-icon
+↓tag [ngx.components.UIUseShared-1682609981487]: 
+  sharedcomponent: CNN_news_reader.Application.NgxApp.Page_Header
 ↓Content [ngx.components.UIDynamicElement-1489674805352]: 
   beanData: '{"ionBean":"Content"}'
   comment: Page content
@@ -122,6 +85,19 @@ title: First page
           ↓FormatLayout [ngx.components.UIDynamicAttr-1682607330343]: 
             beanData: '{"ionBean":"FormatLayout","TextAlignment":"plain:ion-text-wrap"}'
             selfClose: false
+  ↓Button1 [ngx.components.UIDynamicElement-1682609538436]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1682609538431]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓some_text [ngx.components.UIText-1682609538433]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:some button text
+    ↓attr [ngx.components.UIControlEvent-1682609538435]: 
+      ↓doGet [ngx.components.UICustomAction-1682609566452]: 
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

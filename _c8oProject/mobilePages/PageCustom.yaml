@@ -1,0 +1,44 @@
+segment: path-to-pagecustom
+title: Title for PageCustom
+↓tag [ngx.components.UIUseShared-1682610005110]: 
+  sharedcomponent: CNN_news_reader.Application.NgxApp.Page_Header
+↓Content [ngx.components.UIDynamicElement-1682609777973]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Heading [ngx.components.UIDynamicTag-1682609794377]: 
+    beanData: '{"ionBean":"Heading"}'
+    tagName: h1
+    ↓some_text [ngx.components.UIText-1682609794376]: 
+      textValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: plain:heading
+↓Footer [ngx.components.UIDynamicElement-1682609849524]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  tagName: ion-footer
+  ↓ToolBar [ngx.components.UIDynamicElement-1682609849527]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [ngx.components.UIDynamicElement-1682609849530]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
+      tagName: ion-buttons
+      ↓Button1 [ngx.components.UIDynamicElement-1682609849533]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1682609849536]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1682609849539]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓Button2 [ngx.components.UIDynamicElement-1682609849542]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Text [ngx.components.UIText-1682609849545]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
